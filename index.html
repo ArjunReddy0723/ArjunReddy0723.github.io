@@ -60,7 +60,7 @@ originally built for serving test feedback needs @ <a href="http://www.goibibo.c
   <li>Build your own from source 
   <a href="https://github.com/p00j4/xfpanel-plugin" class="button" style="color:#2e7bcf;"><small>Fork</small>RSA</a> 
   <br/> or <br/></li>
-  Download directly here- <a href="https://raw.githubusercontent.com/p00j4/xfpanel-plugin/master/docs/xfpanel.hpi" target="_blank">xfpanel.hpi </a> and upload/deploy plugin file in your jenkins server<br/>
+  Download directly here- <a href="javascript:void(0);" target="_blank" onclick="javascript:xfpanelClick();">xfpanel.hpi </a> and upload/deploy plugin file in your jenkins server<br/>
   <li>Add 2 keys in build parameters of your test jobs
     * env
     * tagtotest
@@ -116,6 +116,10 @@ originally built for serving test feedback needs @ <a href="http://www.goibibo.c
               var pageTracker = _gat._getTracker("UA-64789573-1");
             pageTracker._trackPageview();
             } catch(err) {}
+            function xfpanelClick(){
+              _gaq.push(['_trackEvent', 'xfpanel plugin', 'click']);
+              window.setTimeout("window.location.href='https://raw.githubusercontent.com/p00j4/xfpanel-plugin/master/docs/xfpanel.hpi'", 1000);
+            }
           </script>
 
   </body>
